@@ -1,9 +1,9 @@
-SELECT *, PRINTF($%.2f, SUM(S.subscription_ength * S.price_per_month)) AS "Amount Due"
-FROM Customers AS C
-JOIN Orders AS O
+SELECT *, PRINTF('$%.2f', SUM(S.subscription_length * S.price_per_month)) AS "Amount Due"
+FROM orders AS O
+JOIN customers AS C
     ON C.customer_id = O.customer_id
 
-JOIN Subscriptions AS S
+JOIN subscriptions AS S
     ON O.subscription_id = S.subscription_id
 
 WHERE S.description = "Fashion Magazine"
