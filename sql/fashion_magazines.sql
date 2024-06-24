@@ -10,3 +10,4 @@ JOIN subscriptions
 WHERE subscriptions.description = "Fashion Magazine"
     AND orders.order_status = "unpaid"
 GROUP BY customers.customer_name
+asdf
